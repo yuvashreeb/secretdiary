@@ -41,10 +41,10 @@ if (isset($_POST['submit']) == "signup") {
 
 
             mysqli_query($link, $query);
-            echo "you were successfully signed!";
+            $msg.="you were successfully signed!";
             $_SESSION['id'] = mysqli_insert_id($link);
             // print_r($_SESSION);
-            header("Location:mainpage.php");
+            //header("Location:mainpage.php");
         }
     }
 }// '".mysqli_real_escape_string($link,$_POST['email'])."',md5(md5($_POST['email'].$_POST['password'])."'
